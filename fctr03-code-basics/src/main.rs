@@ -5,6 +5,8 @@ const GOOD_MOVIE_LIMIT: f32 = 7.5;
 mod collections;
 mod functions;
 mod logic_flow;
+mod null_values;
+mod pattern_matching;
 mod standard_output;
 mod strings;
 mod variables;
@@ -18,13 +20,17 @@ pub fn main() {
     println!("-----");
     variables::run();
     println!("-----");
-    strings::run(&movie.title);
+    strings::run();
     println!("-----");
     collections::run();
     println!("-----");
     logic_flow::run(&movie.title, movie.release_year);
     println!("-----");
+    pattern_matching::run(&movie.title, movie.release_year);
+    println!("-----");
     standard_output::run(&movie);
+    println!("-----");
+    null_values::run();
     println!("-----");
     functions::run(&movie);
 }

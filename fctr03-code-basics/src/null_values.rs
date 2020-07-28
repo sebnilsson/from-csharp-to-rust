@@ -1,6 +1,4 @@
-use super::Movie;
-
-pub fn run(movie: &Movie) {
+pub fn run() {
     println!("[null_values]");
 
     run_divide(2);
@@ -9,10 +7,10 @@ pub fn run(movie: &Movie) {
 
 fn run_divide(divisor: i32) {
     let quotient = divide(123, divisor);
-    if quotient.is_some() {
-        println!("Division result: {}", quotient.unwrap());
-    } else {
-        println!("Division failed");
+    match quotient {
+        Some(x) if x > 10 => println!("Big division result: {}", x),
+        Some(x) => println!("Division result: {}", x),
+        None => println!("Division failed")
     }
 }
 

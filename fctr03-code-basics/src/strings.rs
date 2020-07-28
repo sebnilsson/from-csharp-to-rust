@@ -1,9 +1,10 @@
-pub fn run(title: &str) {
+pub fn run() {
     let mut value = String::default();
     for x in 65..68 {
         value.push(x as u8 as char);
     }
 
+    let title = "Ghostbusters";
     // From str to String
     let title_string = String::from(title);
     // From String to str
