@@ -10,7 +10,7 @@ fn run_divide(divisor: i32) {
     match quotient {
         Some(x) if x > 10 => println!("Big division result: {}", x),
         Some(x) => println!("Division result: {}", x),
-        None => println!("Division failed")
+        None => println!("Division failed"),
     }
 }
 
